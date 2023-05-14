@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="center">
+      <h1>Login</h1>
+      <form method="post">
+        <div class="txt_field">
+          <input type="text" id="username" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div class="pass">Forgot Password?</div>
+        <input type="submit" id="login_btn" value="Login">
+        <div class="signup_link">
+          Not a member? <a href="#">Signup</a>
+        </div>
+         <!-- Login JS Me -->
+    <script>
+      document.getElementById("login_btn").addEventListener("click", (e) => {
+        e.preventDefault();
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+          if (username && password) {
+              if (username == "admin" && password == "admin") {
+                window.location = "../admin/";
+              //     Swal.fire({
+              //         icon: "success",
+              //         title: "Success Login!",
+              //         text: "Redirecting you to the admin page.. in 5s..",
+              //         backdrop: `
+              //         rgba(0,0,123,0.4)
+              //         url("")
+              //         left top
+              //         no-repeat
+              //     `
+              //     });
+              //     Swal.getConfirmButton(
+              //         setTimeout(() => {
+              //             window.location.href = "admin/index.php";
+              //         }, 5000)
+              //     );
+              // } else {
+              //     Swal.fire({
+              //         icon: "error",
+              //         title: "Oops...",
+              //         text: "Your username or password is invalid check your data again.",
+              //         footer: "<a href='register.php'>Don't have account? Register here.</a>",
+              //     });
+              }
+          }
+      });
+  </script>
+      </form>
+    </div>
+
+  </body>
+</html>
